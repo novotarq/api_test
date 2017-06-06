@@ -1,3 +1,5 @@
+require 'test_helper'
+
 class PageJobTest < ActiveJob::TestCase
   test 'nothing for now' do
     assert_no_enqueued_jobs do
