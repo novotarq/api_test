@@ -14,4 +14,9 @@ class PageTest < ActiveJob::TestCase
       Page.create!(url: 'http://google.com')
     end
   end
+
+  test 'children create' do
+    #create should create children
+    #mock html response here
+  end
 end

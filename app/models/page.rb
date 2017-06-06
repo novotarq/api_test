@@ -8,6 +8,6 @@ class Page < ApplicationRecord
 
   private
   def parse_content
-    PageJob.perform_later(url)
+    PageJob.perform_later(self)
   end
 end
