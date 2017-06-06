@@ -8,8 +8,8 @@ class PageServiceTest < ActiveSupport::TestCase
 
   test 'children create' do
     page_service = PageService.new(build(:page, url: 'http://'))
-    page_service.stub :open_and_read, @mock_file do
-      assert_difference ['Link.count', 'HtmlTag.count'], 2 do
+    assert_changes 'Link.count' do
+      page_service.stub :open_and_read, @mock_file do
         page_service.perform!
       end
     end
