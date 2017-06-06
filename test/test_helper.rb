@@ -3,6 +3,11 @@ require 'rails/test_help'
 require 'shoulda/matchers'
 require 'minitest/mock'
 
+include FactoryGirl::Syntax::Methods
+
+FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
+FactoryGirl.find_definitions
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :minitest

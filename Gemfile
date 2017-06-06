@@ -53,6 +53,7 @@ end
 group :test do
   gem 'shoulda-context'
   gem 'shoulda-matchers'
+  gem 'factory_girl'
 end
 
 # nice validators
