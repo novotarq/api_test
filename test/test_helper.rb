@@ -1,6 +1,7 @@
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'shoulda/matchers'
+require 'minitest/mock'
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

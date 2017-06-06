@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605223311) do
+ActiveRecord::Schema.define(version: 20170606131548) do
 
   create_table "html_tags", force: :cascade do |t|
-    t.string "content"
+    t.text "content"
     t.string "type"
     t.integer "page_id"
     t.datetime "created_at", null: false
