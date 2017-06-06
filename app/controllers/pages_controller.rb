@@ -8,11 +8,11 @@ class PagesController < BaseApiController
   # POST /pages
   def create
     @page = Page.create!(page_params)
-    json_response(@todo, :created)
+    json_response(@page, :created)
   end
 
   private
   def page_params
-    params.require(:url)
+    params.require(:page).permit(:url)
   end
 end
