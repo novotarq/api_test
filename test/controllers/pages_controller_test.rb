@@ -18,6 +18,7 @@ class PagesControllerTest < ActionController::TestCase
   test 'valid create' do
     post :create, params: { page: { url: 'http://google.com' } }
     assert_response :success
+    assert_includes @response.body, "http://google.com"
   end
 
   test 'invalid create' do
