@@ -18,7 +18,7 @@ class Page < ApplicationRecord
   def build_json_hash
     json = { url: url, links: links.map(&:url) }
     (1..3).each do |elem|
-      json["h#{elem}"] = html_tags.where(type: "h#{elem}").map(&:content)
+      json["h#{elem}"] = html_tags.where(type: "H#{elem}").map(&:content)
     end
     json
   end

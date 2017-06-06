@@ -10,7 +10,7 @@ class LinkTest < ActiveSupport::TestCase
   test 'validations' do
     assert build(:link, url: '', page: @page).invalid?
     assert build(:link, url: nil, page: @page).invalid?
-    assert build(:link, url: 'test', page: @page).invalid?
+    assert build(:link, url: 'test', page: @page).valid?
     assert build(:link, url: 'https://test.com/', page: nil).invalid?
     assert build(:link, url: 'http://test.com/', page: @page).valid?
     assert build(:link, url: 'https://test.com/', page: @page).valid?
